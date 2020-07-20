@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bouda
+  labels:
+    app: bouda
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bouda
+  template:
+    metadata:
+      labels:
+        app: bouda
+    spec:
+      containers:
+      - name: bouda
+        image: ${imageName}-${BUILD_NUMBER}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: dock
+---
