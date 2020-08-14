@@ -18,7 +18,7 @@ podTemplate(label: 'mypod', containers: [
 		stage('Git checkout'){
 		
 		git credentialsId: 'GITHUB', url: 'https://github.com/mhachemi1403/tomi12'
-		// test webhoo
+		// test webhook
 		
 	
 		}
