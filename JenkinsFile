@@ -16,11 +16,11 @@ podTemplate(label: 'mypod', containers: [
 		cleanWs()
 		}
 		stage('Git checkout'){
-		container('git'){
+		
 		git credentialsId: 'GITHUB', url: 'https://github.com/mhachemi1403/tomi12'
 		// test webhoo
 		
-		}
+	
 		}
 		stage('build'){
 		//second test
@@ -31,9 +31,8 @@ podTemplate(label: 'mypod', containers: [
 		}
 		stage('docker'){
 		container('docker'){
-		sh'docker build . -t nexus.do/demo:latest'
-		sh 'docker login nexus.do --username=admin --password=admin123'
-		sh 'docker push nexus.do/demo:latest'
+		sh'docker build . -t hachemi:latest'
+		
 		}
 		}
 		

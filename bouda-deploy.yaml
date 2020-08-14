@@ -17,10 +17,9 @@ spec:
     spec:
       containers:
       - name: bouda
-        image: ${imageName}-${BUILD_NUMBER}
+        image: hachemi:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
-      imagePullSecrets:
-        - name: dock
+  
 ---
