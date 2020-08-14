@@ -17,7 +17,7 @@ podTemplate(label: 'mypod', containers: [
 		}
 		stage('Git checkout'){
 		container('git'){
-		git credentialsId: 'bouda', url: 'https://github.com/bouda10/spring-boot-maven-example-helloworld.git'
+		git credentialsId: 'GITHUB', url: 'https://github.com/mhachemi1403/tomi12.git'
 		// test webhoo
 		
 		}
