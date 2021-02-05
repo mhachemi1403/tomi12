@@ -19,6 +19,7 @@ podTemplate(label: 'mypod', containers: [
 		
 		git credentialsId: 'GITHUB', url: 'https://github.com/mhachemi1403/tomi12'
 		// test webhook
+		//test 2
 		
 	
 		}
